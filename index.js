@@ -5,7 +5,7 @@ const messageinput = document.querySelector("#typingInput");
 const sendBtn = document.querySelector("#sendMessage");
 const duckContainer = document.querySelector(".duckContainer");
 
-const apiUri = "https://kartlegging.kodehode.no:443"
+const apiUri = "https://kartlegging.kodehode.no"
 const apiUrl = new URL(apiUri);
 
 let generatedName = await getName();
