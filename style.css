@@ -1,0 +1,136 @@
+:root{
+    --main-yellow: #FFD153;
+    --main-text-color: black;
+    --send-btn-color: #002EAC;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 100svw;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    background-color: var(--main-yellow);
+    gap: 2rem;
+    padding: 8rem;
+}
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    max-height: 10rem;
+    border: solid black 2px;
+    background-color: white;
+    border-radius: 1.8rem;
+}
+#header-duck{
+    max-width: 10%;
+    aspect-ratio: 1/1;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+#rerollUserName{
+    max-width: 8%;
+    background-image: linear-gradient(
+        to bottom,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        purple
+    );
+    aspect-ratio: 1/1;
+    font-size: 0.6rem;
+    border-radius: 1.2rem;
+    border: none;
+}
+#rerollUserName>img{
+    max-width: 50%;
+}
+
+main{
+    width: 100%;
+    aspect-ratio: 1/1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    gap: 1rem;
+}
+#chatWindow{
+    min-height: 50vh;
+    width: 100%;
+    height: 60%;
+}
+#output{
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    border: 2px solid black;
+    border-radius: 1.8rem;
+    background-color: white;
+}
+#messageInput{
+    display:grid;
+    position: relative;
+    width: 100%;
+    min-height: 5vh;
+    height: 10%;
+}
+#typingInput{
+    width: 100%;
+    border : 2px solid black;
+    border-radius: 1rem;
+    height: 100%;
+}
+#sendMessage{
+    position:absolute;
+    align-self: center;
+    justify-self: end;
+    display:flex;
+    min-height: inherit;
+    aspect-ratio: 2.5/1;
+    justify-content: center;
+    align-items: center;
+    border:2px solid black;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    background-color: white;
+}
+.duckContainer{
+    height: 100%;
+    width: 100%;
+    padding: 0.1rem;
+    background-image: url(images/passive.svg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.duckContainer:hover{
+    background-image: url(images/active.svg);
+}
+
+.duckContainerActive{
+    height: 100%;
+    width: 100%;
+    padding: 0.1rem;
+    background-image: url(images/active.svg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+
