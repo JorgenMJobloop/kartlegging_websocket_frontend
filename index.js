@@ -5,7 +5,7 @@ const messageinput = document.querySelector("#typingInput");
 const sendBtn = document.querySelector("#sendMessage");
 const duckContainer = document.querySelector(".duckContainer");
 
-const apiUri = "https://kartlegging.kodehode.no"
+const apiUri = "https://kartlegging.kodehode.no:443"
 const apiUrl = new URL(apiUri);
 
 let generatedName = await getName();
@@ -42,9 +42,9 @@ window.addEventListener("keydown", (e) => {
 })
 
 const writeToOuput = (message) => {
-    /* const messagePara = document.createElement("p");
-    messagePara.textContent = message; */
-    chatArea.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
+    const messagePara = document.createElement("p");
+    messagePara.textContent = message;
+    //chatArea.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
 }
 
 const sendOnSocket = (message) => {
@@ -60,6 +60,7 @@ webSocket.onopen = (e) => {
 webSocket.onmessage = (e) => {
     writeToOuput(`${e.data}`)
 }
+
 webSocket.onclose = (e) => {
     writeToOuput("DISCONNECTED!");
 }
